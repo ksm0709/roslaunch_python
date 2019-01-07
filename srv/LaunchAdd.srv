@@ -1,0 +1,3 @@
+roslaunch_python/LaunchInterface interface
+---
+bool succeeded

@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<package format="2">
+  <name>roslaunch_python</name>
+  <version>0.0.1</version>
+  <description>The roslaunch_python package</description>
+  <maintainer email="ksm07091@gamil.com">TaehoKang</maintainer>
+
+  <license>MIT</license>
+
+  <buildtool_depend>catkin</buildtool_depend>
+
+  <depend>rospy</depend>
+  <depend>std_msgs</depend>
+  <depend>std_srvs</depend>
+  
+  <build_depend>message_generation</build_depend>
+  <build_export_depend>message_runtime</build_export_depend>
+  <exec_depend>message_runtime</exec_depend> 
+
+</package>

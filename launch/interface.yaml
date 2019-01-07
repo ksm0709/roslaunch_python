@@ -1,0 +1,20 @@
+interface:  #fixed namespace
+ 
+  # interface name : 'example1'
+  example1:
+    package: roslaunch_python
+    file_name: example.launch
+    output: screen
+
+    # <arg> tags in example.launch 
+    args:
+      green: true
+
+  # interface name : 'example2'
+  example2:
+    package: roslaunch_python
+    file_name: example.launch
+    output: screen
+
+    args:
+      green: false

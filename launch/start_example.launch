@@ -1,0 +1,7 @@
+<launch>
+    <!--server -->
+    <node pkg="kt_tools" type="roslaunch_server.py" name="roslaunch_server"/>
+
+    <!-- manager(client) -->
+    <node pkg="kt_tools" type="roslaunch_example.py" name="example_manager" output="screen"/>
+</launch>
