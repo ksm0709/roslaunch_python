@@ -2,10 +2,10 @@
 import rospy
 import yaml
 
-from roslaunch_python.msg import LaunchInterface
-from roslaunch_python.srv import *
+from kt_tools.msg import LaunchInterface
+from kt_tools.srv import *
 
-from roslaunch_python.roslaunch_interface import RosLaunchInterface
+from kt_tools.roslaunch_interface import RosLaunchInterface
 
 class RosLaunchClient(object):
     '''
@@ -15,7 +15,7 @@ class RosLaunchClient(object):
     @author TaehoKang (ksm07091@gmail.com)
     '''
 
-    def __init__(self, server_name = "", cfg_path=""):
+    def __init__(self, server_name = "roslaunch_server"):
         super(RosLaunchClient, self).__init__()
 
         self.proxy_add = rospy.ServiceProxy(server_name+"/add", LaunchAdd)

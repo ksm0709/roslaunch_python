@@ -2,7 +2,7 @@
 import rospy
 import yaml
 
-from roslaunch_python.msg import LaunchInterface
+from kt_tools.msg import LaunchInterface
 
 class RosLaunchInterface(object):
     '''
@@ -55,13 +55,13 @@ class RosLaunchInterface(object):
                             self._output = val["output"]
                         if 'args' in val.keys():
 
-                            for key in val["args"].keys():
-                                arg_val = str(val["args"][key])
+                            for arg_key in val["args"].keys():
+                                arg_val = str(val["args"][arg_key])
 
-                                if type(val["args"][key]) == 'bool':
+                                if type(val["args"][arg_key]) == 'bool':
                                     arg_val = arg_val.lower()
 
-                                self._args[key] = arg_val
+                                self._args[arg_key] = arg_val
 
                         flag = True
 

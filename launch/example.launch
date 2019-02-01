@@ -2,19 +2,21 @@
 
     <arg name="green"   default="false"/>
 
-    <group if="$(arg green)">
-        <param  name="background_g"   value="100"/>   
-        <param  name="background_b"   value="0"/>   
-        <param  name="background_r"   value="0"/>   
-    </group>
+	<group if="$(arg green)">
+		<node pkg="turtlesim" name="sim" type="turtlesim_node">
+			<param  name="/background_g"   value="100"/>   
+			<param  name="/background_b"   value="0"/>   
+			<param  name="/background_r"   value="0"/>   
+		</node>
 
-    <group unless="$(arg green)">
-        <param  name="background_g"   value="0"/>   
-        <param  name="background_b"   value="100"/>   
-        <param  name="background_r"   value="0"/>   
-    </group>
-  
+	</group>
 
-    <node pkg="turtlesim" name="sim" type="turtlesim_node"/>
+	<group unless="$(arg green)">
+		<node pkg="turtlesim" name="sim" type="turtlesim_node">
+			<param  name="~background_g"   value="0"/>   
+			<param  name="~background_b"   value="100"/>   
+			<param  name="~background_r"   value="0"/>   
+		</node>
+	</group>
 
 </launch>
