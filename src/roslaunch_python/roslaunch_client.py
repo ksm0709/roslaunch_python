@@ -2,10 +2,10 @@
 import rospy
 import yaml
 
-from kt_tools.msg import LaunchInterface
-from kt_tools.srv import *
+from roslaunch_python.msg import LaunchInterface
+from roslaunch_python.srv import *
 
-from kt_tools.roslaunch_interface import RosLaunchInterface
+from roslaunch_python.roslaunch_interface import RosLaunchInterface
 
 class RosLaunchClient(object):
     '''

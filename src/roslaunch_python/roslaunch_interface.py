@@ -2,7 +2,7 @@
 import rospy
 import yaml
 
-from kt_tools.msg import LaunchInterface
+from roslaunch_python.msg import LaunchInterface
 
 class RosLaunchInterface(object):
     '''

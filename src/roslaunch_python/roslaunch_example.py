@@ -1,8 +1,8 @@
 #!/usr/bin/env python
 import rospy, rospkg
 
-from kt_tools.roslaunch_interface import RosLaunchInterface
-from kt_tools.roslaunch_client import RosLaunchClient
+from roslaunch_python.roslaunch_interface import RosLaunchInterface
+from roslaunch_python.roslaunch_client import RosLaunchClient
 
 if __name__ == "__main__":
 
@@ -10,8 +10,8 @@ if __name__ == "__main__":
     rospack = rospkg.RosPack()
 
     launch_client = RosLaunchClient(server_name='roslaunch_server')
-    ex1_interface = RosLaunchInterface(name='example1', yaml_file=rospack.get_path('kt_tools')+'/launch/interface.yaml')
-    ex2_interface = RosLaunchInterface(name='example2', yaml_file=rospack.get_path('kt_tools')+'/launch/interface.yaml')
+    ex1_interface = RosLaunchInterface(name='example1', yaml_file=rospack.get_path('roslaunch_python')+'/launch/interface.yaml')
+    ex2_interface = RosLaunchInterface(name='example2', yaml_file=rospack.get_path('roslaunch_python')+'/launch/interface.yaml')
 
     ex1_interface.set_arg('green','true')
     ex2_interface.set_arg('green','false')
